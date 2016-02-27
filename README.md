@@ -15,7 +15,7 @@ View the currents machines you have booted
 
     gcloud compute instances list
   
-You should be able to use docker login at this moment
+You should be able to use docker login at this moment, this will give you access to your dockerhub images
   
     docker login
   
@@ -51,6 +51,10 @@ Run command inside a pod
 View logs of pod
 
     kubectl logs wordpress-pphc3
+
+More commands are also available to you if you need more specifics features
+
+    kubectl --help
   
 Related documentation
 
