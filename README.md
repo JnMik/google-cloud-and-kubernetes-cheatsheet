@@ -40,6 +40,7 @@ It might takes few minutes before the services is creatd and exposed, you can us
     kubectl describe services wordpress
   
 Related documentation
+
     Pricing sheet : https://cloud.google.com/compute/pricing?hl=fr&_ga=1.190239275.1094250114.1456595331
     Google cloud shell : https://cloud.google.com/shell/docs/
     Boot your first app : https://cloud.google.com/container-engine/docs/tutorials/hello-wordpress
