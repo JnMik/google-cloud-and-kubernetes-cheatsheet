@@ -1,4 +1,4 @@
-# google-cloud-cheatsheet
+# Google Cloud - Cheatsheet
 
 This document take into consideration that you already have a google and have access to google cloud.
 Go straight into the Google cloud shell.
