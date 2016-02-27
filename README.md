@@ -1,7 +1,7 @@
 # Google Cloud - Cheatsheet
 
 This document take into consideration that you already have a google account and have access to google cloud.
-Go straight into the Google cloud shell. Hope it helps you get started, even tho I mostly did this sheet for myself lol.
+Go straight into the Google cloud shell. Hope it helps you get started, even tho I mostly did this sheet for myself.
 
 Create a new cluster (view pricing doc at the bottom to see price for f1-micro or other machines)
 
