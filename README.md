@@ -18,9 +18,13 @@ Now you can start playing with kubectl to deploy containers and pods
   
     kubectl run wordpress --image=tutum/wordpress --port=80
   
-Your container at this point is not available to the public, you can expose it by linking it to the load balancer.
+Your container at this point is not available to the public, you can expose it by linking it to the load balancer (this create a service).
 
     kubectl expose rc wordpress --type=LoadBalancer
+    
+It might takes few minutes before the services is creatd and exposed, you can use the describe command to have more details on the service. Once you see the external IP there, it should be available, but I notice a little delay even after the public IP is shown there.
+
+    kubectl describe services wordpress
   
 Related documentation
 
