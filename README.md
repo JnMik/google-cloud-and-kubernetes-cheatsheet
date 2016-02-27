@@ -38,6 +38,19 @@ How to delete the service, which also deletes your external load balancer:
 It might takes few minutes before the services is creatd and exposed, you can use the describe command to have more details on the service. Once you see the external IP there, it should be available, but I notice a little delay even after the public IP is shown there.
 
     kubectl describe services wordpress
+    
+Lisiting commands
+
+    kubectl get pods
+    kubectl get services
+    
+Run command inside a pod
+    
+    kubectl exec wordpress-pphc3 service apache2 reload
+ 
+View logs of pod
+
+    kubectl logs wordpress-pphc3
   
 Related documentation
 
