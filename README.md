@@ -1,12 +1,12 @@
 # google-cloud-cheatsheet
 
 This document take into consideration that you already have a google and have access to google cloud.
+Go straight into the Google cloud shell.
 
-Create a new cluster
+Create a new cluster (view pricing doc at the bottom to see price for f1-micro or other machines)
 
     gcloud container clusters create hello-world --num-nodes 1 --machine-type f1-micro
     
-
 Delete a cluster:
 
     gcloud container clusters delete hello-world
@@ -40,5 +40,6 @@ It might takes few minutes before the services is creatd and exposed, you can us
     kubectl describe services wordpress
   
 Related documentation
-
-    https://cloud.google.com/container-engine/docs/tutorials/hello-wordpress
+    Pricing sheet : https://cloud.google.com/compute/pricing?hl=fr&_ga=1.190239275.1094250114.1456595331
+    Google cloud shell : https://cloud.google.com/shell/docs/
+    Boot your first app : https://cloud.google.com/container-engine/docs/tutorials/hello-wordpress
