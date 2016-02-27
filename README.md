@@ -1,7 +1,7 @@
 # Google Cloud - Cheatsheet
 
 This document take into consideration that you already have a google account and have access to google cloud.
-Go straight into the Google cloud shell. Hope it helps you get started, even tho I mostly did this sheet for myself.
+Go straight into the Google cloud shell. Hope it helps you get started, even though I mostly did this sheet for myself.
 
 Create a new cluster (view pricing doc at the bottom to see price for f1-micro or other machines)
 
@@ -19,7 +19,7 @@ You should be able to use docker login at this moment, this will give you access
   
     docker login
   
-Now you can start playing with kubectl to deploy containers through pods
+Now you can start playing with kubectl to deploy containers through pods and replication controllers
   
     kubectl run wordpress --image=tutum/wordpress --port=80
   
@@ -43,7 +43,7 @@ Lisiting commands
 
     kubectl get pods
     kubectl get services
-    
+    kubectl get rc (replication controllers)
 Run command inside a pod
     
     kubectl exec wordpress-pphc3 service apache2 reload
@@ -51,6 +51,10 @@ Run command inside a pod
 View logs of pod
 
     kubectl logs wordpress-pphc3
+    
+Add more instances of containers via kubectl scale
+
+    kubectl scale --replicas=2 replicationcontrollers redis-container
 
 More commands are also available to you if you need more specifics features
 
