@@ -51,6 +51,7 @@ It might takes few minutes before the services is creatd and exposed, you can us
     kubectl get pods
     kubectl get services
     kubectl get rc (replication controllers)
+    kubectl get pod <pod name> -o wide  (Check on which docker node the pod is released)
 
 ### Run command inside a pod
     
