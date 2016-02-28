@@ -20,7 +20,12 @@ Hop straight into the Google cloud shell.
 ### You should be able to use docker login at this moment, this will give you access to your dockerhub images
   
     docker login
-  
+    
+### Authenticate to the container cluster you have launched
+
+    gcloud container clusters list
+    gcloud container clusters get-credentials <your-cluster-name> --zone=<your-cluster-zone>
+    
 ### Now you can start playing with kubectl to deploy containers through pods and replication controllers
   
     kubectl run wordpress --image=tutum/wordpress --port=80
