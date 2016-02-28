@@ -28,7 +28,10 @@ Hop straight into the Google cloud shell.
     
 ### Now you can start playing with kubectl to deploy containers through pods and replication controllers
   
-    kubectl run wordpress --image=tutum/wordpress --port=80
+    Deploy a single container : 
+      kubectl run wordpress --image=tutum/wordpress --port=80
+    If you want to deploy a pod with multiple containers in it :
+      https://cloud.google.com/container-engine/docs/replicationcontrollers/operations
   
 ### Delete the running pods with:
 
