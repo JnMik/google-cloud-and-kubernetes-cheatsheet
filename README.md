@@ -75,6 +75,10 @@ It might takes few minutes before the services is creatd and exposed, you can us
 
     kubectl scale --replicas=2 replicationcontrollers redis-container
 
+### Ad more nodes to your container cluster
+
+    gcloud container clusters resize <cluster name> --size=<node_count> --zone=<zone>
+
 ### More commands are also available to you if you need more specifics features
 
     kubectl --help
