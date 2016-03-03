@@ -21,6 +21,10 @@ Hop straight into the Google cloud shell.
   
     docker login
     
+You can also create a secret yaml file that you will use in your pods configuration yaml file, that should make sure your     authentication to your docker repository is shared across all your docker nodes. Learn more about this here, and read the comments because Kubernates documentation is outdated.
+    
+    http://stackoverflow.com/questions/34290528/kubernetes-pullimageerror-using-docker-hub-with-a-private-image
+    
 ### Authenticate to the container cluster you have launched
 
     gcloud container clusters list
