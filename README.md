@@ -58,6 +58,10 @@ It might takes few minutes before the services is creatd and exposed, you can us
 
     kubectl describe services wordpress
     
+### Enter bash in a container
+
+    kubectl exec <pod_id> -it -- bash -il
+    
 ### Lisiting commands
 
     kubectl get pods
