@@ -17,11 +17,11 @@ Hop straight into the Google cloud shell.
 
     gcloud compute instances list
   
-### You should be able to use docker login at this moment, this will give you access to your dockerhub images
+### Authenticate to your docker repositories
   
     docker login
-    
-You can also create a secret yaml file that you will use in your pods configuration yaml file, that should make sure your     authentication to your docker repository is shared across all your docker nodes. Learn more about this here, and read the comments because Kubernates documentation is outdated.
+
+At this point, if you want to deploy your containers easily without having to connect to each node and docker login / docker pull on these, you will use kubectl tool to deploy. kubectl need to be aware of your credentials for your docker repositories. For that, you will need to create a yaml file to generate a "secret". Learn more about this here, and read the comments because Kubernetes documentation is outdated.
     
     http://stackoverflow.com/questions/34290528/kubernetes-pullimageerror-using-docker-hub-with-a-private-image
     
@@ -38,6 +38,8 @@ You can also create a secret yaml file that you will use in your pods configurat
         https://cloud.google.com/container-engine/docs/replicationcontrollers/operations
     If you have issues like PullImageError and stuff like that, you can get more details with this commands
         kubectl describe pod <pod_name>
+    If you still have issues with PullImageError, make sure .docker/config.json file is the same on all your docker nodes.
+    If the file mismatch from a server to another, some of these will mismatch with the secret you generated, it will cause some issues.
   
   
 ### Delete the running pods with:
