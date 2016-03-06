@@ -96,6 +96,10 @@ I suggest you take the time to read this documentation about admission controlle
 Enabled admission controllers can be managed here
 
     /etc/kubernetes/apiserver
+    
+If you edit the admission controllers, don't forget to restart the service
+
+    systemctl restart kube-apiserver.service
 
 ## Debugging
 
