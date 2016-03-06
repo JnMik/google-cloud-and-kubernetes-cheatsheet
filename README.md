@@ -36,11 +36,6 @@ At this point, if you want to deploy your containers easily without having to co
         kubectl run wordpress --image=tutum/wordpress --port=80
     If you want to deploy a pod with multiple containers in it :
         https://cloud.google.com/container-engine/docs/replicationcontrollers/operations
-    If you have issues like PullImageError and stuff like that, you can get more details with this commands
-        kubectl describe pod <pod_name>
-    If you still have issues with PullImageError, make sure .docker/config.json file is the same on all your docker nodes.
-    If the file mismatch from a server to another, some of these will mismatch with the secret you generated, it will cause some issues.
-  
   
 ### Delete the running pods with:
 
@@ -92,6 +87,20 @@ It might takes few minutes before the services is creatd and exposed, you can us
 ## Monitoring on compute engine
 At the end of each VM rows in the VM instances section, there is a SSH button that would popup a shell inside the VM. It may be pretty hard to see on a small screen. Once in the VM, you should be able to install New Relic Agent following the debian documentation.
 
+## Debugging
+
+If you have issues like PullImageError and stuff like that, you can get more details with this commands
+
+        kubectl describe pod <pod_name>
+        
+If you still have issues with PullImageError, make sure .docker/config.json file is the same on all your docker nodes.
+If the file mismatch from a server to another, some of these will mismatch with the secret you generated, it will cause some issues.
+
+While having random issues, I also managed to get some very good hints from these commands
+
+    kubelet logs
+    kubectl get events
+    tail -f /var/log/messages
   
 ## Related documentation
 
