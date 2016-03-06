@@ -1,4 +1,4 @@
-# Google Cloud - Cheatsheet
+# Google Cloud and Kubernetes - Cheatsheet
 
 This document take into consideration that you already have a google account and have access to google cloud.
 Hop straight into the Google cloud shell.
@@ -99,3 +99,4 @@ At the end of each VM rows in the VM instances section, there is a SSH button th
     Google cloud shell : https://cloud.google.com/shell/docs/
     Boot your first app : https://cloud.google.com/container-engine/docs/tutorials/hello-wordpress
     New Relic : https://docs.newrelic.com/docs/servers/new-relic-servers-linux/installation-configuration/servers-installation-ubuntu-debian
+    To install your own Kubernetes clusters http://severalnines.com/blog/installing-kubernetes-cluster-minions-centos7-manage-pods-services)
