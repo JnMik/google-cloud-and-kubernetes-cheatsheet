@@ -115,6 +115,7 @@ While having random issues, I also managed to get some very good hints from thes
     kubelet logs
     kubectl get events
     tail -f /var/log/messages
+    kubectl logs <pod_name>
   
 ## Related documentation
 
