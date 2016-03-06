@@ -84,10 +84,10 @@ It might takes few minutes before the services is creatd and exposed, you can us
 
     kubectl --help
     
-## Monitoring on compute engine
+### Monitoring on compute engine
 At the end of each VM rows in the VM instances section, there is a SSH button that would popup a shell inside the VM. It may be pretty hard to see on a small screen. Once in the VM, you should be able to install New Relic Agent following the debian documentation.
 
-# AdmissionController
+### AdmissionController
 
 I suggest you take the time to read this documentation about admission controllers
 
