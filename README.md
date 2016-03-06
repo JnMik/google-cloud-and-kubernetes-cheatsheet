@@ -87,6 +87,16 @@ It might takes few minutes before the services is creatd and exposed, you can us
 ## Monitoring on compute engine
 At the end of each VM rows in the VM instances section, there is a SSH button that would popup a shell inside the VM. It may be pretty hard to see on a small screen. Once in the VM, you should be able to install New Relic Agent following the debian documentation.
 
+# AdmissionController
+
+I suggest you take the time to read this documentation about admission controllers
+
+    http://kubernetes.io/v1.0/docs/admin/admission-controllers.html
+    
+Enabled admission controllers can be managed here
+
+    /etc/kubernetes/apiserver
+
 ## Debugging
 
 If you have issues like PullImageError and stuff like that, you can get more details with this commands
