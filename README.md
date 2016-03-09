@@ -116,6 +116,10 @@ While having random issues, I also managed to get some very good hints from thes
     kubectl get events
     tail -f /var/log/messages
     kubectl logs <pod_name>
+    
+If you having issue mounting files in your pods, with "Permission denied message", make sure your docker nodes authorized the files in SELinux.
+
+    chcon -Rt svirt_sandbox_file_t /path/to/file.ext
   
 ## Related documentation
 
