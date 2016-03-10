@@ -1,0 +1,50 @@
+{
+  "kind": "ReplicationController",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "<pod-name>",
+    "labels": {
+      "state": "serving"
+    }
+  },
+  "spec": {
+    "replicas": 1,
+    "selector": {
+      "app": "<pod-name>"
+    },
+    "template": {
+      "metadata": {
+        "labels": {
+          "app": "<pod-name>"
+        }
+      },
+      "spec": {
+        "volumes": null,
+        "containers": [
+            {
+                "name": "<Container name>",
+                "image": "<DOCKER-IMAGE-NAME:DOCKER-IMAGE-TAG>",
+                "env": [
+                    {
+                        "name": "<ENV-VAR-NAME>",
+                        "value": "<ENV-VALUE>"
+                    }
+                ],
+                "ports": [
+                    {
+                        "containerPort": 80
+                    }
+                ]
+            }
+        ],
+        "imagePullSecrets": [
+            {
+              "name": "<some-secret-name>"
+            }
+        ],
+        "restartPolicy": "Always",
+        "dnsPolicy": "ClusterFirst"
+      }
+    }
+  }
+}
