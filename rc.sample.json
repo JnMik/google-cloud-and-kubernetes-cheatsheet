@@ -19,7 +19,14 @@
         }
       },
       "spec": {
-        "volumes": null,
+        "volumes": [
+            {
+                "name" : "<some-name-of-volume-mount>",
+                "hostPath": {
+                     "path": "<path-tonode-file>"
+                }
+            }
+        ],
         "containers": [
             {
                 "name": "<Container name>",
@@ -34,7 +41,14 @@
                     {
                         "containerPort": 80
                     }
+                ],
+                "volumeMounts": [
+                    {
+                        "name": "<same-name-of-volume-mount-as-above>",
+                        "mountPath": "<path-destination-in-container>"
+                    }
                 ]
+
             }
         ],
         "imagePullSecrets": [
