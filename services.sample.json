@@ -11,9 +11,9 @@
         "ports": [
             {
                 "protocol": "TCP",
-                "port": <port-expose-on-all-node>,
-                "targetPort": <port-expose-in-container>,
-                "nodePort": <port-expose-on-all-node>
+                "port": "<port-expose-on-all-node>",
+                "targetPort": "<port-expose-in-container>",
+                "nodePort": "<port-expose-on-all-node>"
             }
         ],
         "type": "NodePort"
