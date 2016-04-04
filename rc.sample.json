@@ -4,18 +4,22 @@
   "metadata": {
     "name": "<pod-name>",
     "labels": {
+      "name": "<pod-name>",
+      "version": "<pod-version>",
       "state": "serving"
     }
   },
   "spec": {
     "replicas": 1,
     "selector": {
-      "app": "<pod-name>"
+      "app": "<pod-name>",
+      "version": "<pod-version>"
     },
     "template": {
       "metadata": {
         "labels": {
-          "app": "<pod-name>"
+          "app": "<pod-name>",
+          "version": "<pod-version>"
         }
       },
       "spec": {

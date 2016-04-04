@@ -24,7 +24,10 @@ Hop straight into the Google cloud shell.
 At this point, if you want to deploy your containers easily without having to connect to each node and docker login / docker pull on these, you will use kubectl tool to deploy. kubectl need to be aware of your credentials for your docker repositories. For that, you will need to create a yaml file to generate a "secret". Learn more about this here, and read the comments because Kubernetes documentation is outdated.
     
     http://stackoverflow.com/questions/34290528/kubernetes-pullimageerror-using-docker-hub-with-a-private-image
-    
+
+    Big picture is, you must base64encode the content of ~/.docker/config.json, but you must remove the auth: {} in it first
+    because it's somehow buggy. Then you can take this piece of code and put it in the secret file (see my secret.sample.yaml file)
+
 ### Authenticate to the container cluster you have launched
 
     gcloud container clusters list
@@ -36,7 +39,19 @@ At this point, if you want to deploy your containers easily without having to co
         kubectl run wordpress --image=tutum/wordpress --port=80
     If you want to deploy a pod with multiple containers in it :
         https://cloud.google.com/container-engine/docs/replicationcontrollers/operations
-  
+
+### Rolling update
+
+  Kubernetes allows you to release new version of your application without down time.
+  This must be done with the rolling-update tool. The tool will launched the new containers, and down
+  the previous, one at a time. Here's the command line :
+
+  kubectl rolling-update <rc-controller-name-to-down> -f new-rc-controller-config.json
+
+  Be careful tho, you *must* specify version number if your RC config, or rolling update WILL crash,
+  and your application will be down. See my rc.sample.json for reference, version number
+  must be specify at multiple place.
+
 ### Delete the running pods with:
 
     kubectl delete rc wordpress
