@@ -46,7 +46,7 @@ At this point, if you want to deploy your containers easily without having to co
   This must be done with the rolling-update tool. The tool will launched the new containers, and down
   the previous, one at a time. Here's the command line :
 
-  kubectl rolling-update <rc-controller-name-to-down> -f new-rc-controller-config.json
+  kubectl rolling-update `<rc-controller-name-to-down>` -f `<new-rc-controller-config.json>`
 
   Be careful tho, you *must* specify version number if your RC config, or rolling update WILL crash,
   and your application will be down. See my rc.sample.json for reference, version number
